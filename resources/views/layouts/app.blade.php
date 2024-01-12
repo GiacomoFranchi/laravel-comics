@@ -10,10 +10,13 @@
     @vite('resources/js/app.js')
 </head>
 <body>
-
+    {{--Header--}}
+    @include('partials.header')
     <main>
         @yield('content')
     </main>
     
+    {{--Footer--}}
+    @include('partials.footer')
 </body>
 </html>

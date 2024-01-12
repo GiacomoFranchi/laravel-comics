@@ -1,5 +1,12 @@
+@use './partials/header' as *;
+
 @import "~bootstrap/scss/bootstrap";
+
 
 body {
     background-color: lightgreen;
+}
+
+img{
+    max-width: 100%;
 }
