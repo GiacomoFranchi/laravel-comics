@@ -1,10 +1,11 @@
 @use './partials/header' as *;
+@use './partials/footer' as *;
 
 @import "~bootstrap/scss/bootstrap";
 
 
 body {
-    background-color: lightgreen;
+    background-color:black;
 }
 
 img{

@@ -14,16 +14,78 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    $link = [
+    'links' => [
+        "home",
+        "comic",
+        "MOVIES",
+        "TV",
+        "GAMES",
+        "COLLECTIBLES",
+        "VIDEOS",
+        "FANS",
+        "NEWS",
+        "shop"
+    ]
+    ];
+
+    return view('home', $link);
+})->name('home');
+
+Route::get('/home', function () {
+    $link = [
+    'links' => [
+        "home",
+        "comic",
+        "MOVIES",
+        "TV",
+        "GAMES",
+        "COLLECTIBLES",
+        "VIDEOS",
+        "FANS",
+        "NEWS",
+        "shop"
+    ]
+    ];
+
+    return view('home', $link);
 })->name('home');
 
 Route::get('/comic', function () {
     $comics = config('db.comics');
-    return view('comic', compact ('comics'));
+    $link = [
+        'links' => [
+            "home",
+            "comic",
+            "MOVIES",
+            "TV",
+            "GAMES",
+            "COLLECTIBLES",
+            "VIDEOS",
+            "FANS",
+            "NEWS",
+            "shop"
+        ]
+        ];
+        return view('comic', compact ('comics'), $link);
 })->name('comic');
 
 Route::get('/shop', function () {
-    return view('shop');
+    $link = [
+        'links' => [
+            "home",
+            "comic",
+            "MOVIES",
+            "TV",
+            "GAMES",
+            "COLLECTIBLES",
+            "VIDEOS",
+            "FANS",
+            "NEWS",
+            "shop"
+        ]
+        ];
+    return view('shop', $link);
 })->name('shop');
 
 
